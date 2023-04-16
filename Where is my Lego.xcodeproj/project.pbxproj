@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		812CD41029EB02C900ED30F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812CD40F29EB02C900ED30F0 /* AppDelegate.swift */; };
+		812CD41929EC625800ED30F0 /* LiveActivitiesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812CD41829EC625800ED30F0 /* LiveActivitiesListViewModel.swift */; };
+		81789F6E29D9777A0055CC53 /* LegoDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F6D29D9777A0055CC53 /* LegoDelivery.swift */; };
+		81789F7029D97B000055CC53 /* DeliveryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F6F29D97B000055CC53 /* DeliveryDetails.swift */; };
+		81789F7429D983BF0055CC53 /* DeliveryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F7329D983BF0055CC53 /* DeliveryDetailsViewModel.swift */; };
+		81F5D59029D96E9A001BF4FA /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5D58F29D96E9A001BF4FA /* MainApp.swift */; };
+		81F5D59229D96E9A001BF4FA /* LiveActivitiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5D59129D96E9A001BF4FA /* LiveActivitiesList.swift */; };
+		81F5D59429D96E9C001BF4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F5D59329D96E9C001BF4FA /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81789F9229D985EE0055CC53 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		812CD40E29EAF4D000ED30F0 /* WhereIsMyLego.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WhereIsMyLego.plist; sourceTree = SOURCE_ROOT; };
+		812CD40F29EB02C900ED30F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		812CD41829EC625800ED30F0 /* LiveActivitiesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivitiesListViewModel.swift; sourceTree = "<group>"; };
+		815ABEA529DB2E410034AC0B /* Where is my Lego.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Where is my Lego.entitlements"; sourceTree = "<group>"; };
+		81789F6D29D9777A0055CC53 /* LegoDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoDelivery.swift; sourceTree = "<group>"; };
+		81789F6F29D97B000055CC53 /* DeliveryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetails.swift; sourceTree = "<group>"; };
+		81789F7329D983BF0055CC53 /* DeliveryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailsViewModel.swift; sourceTree = "<group>"; };
+		81789F7B29D985ED0055CC53 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		81789F7D29D985ED0055CC53 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		81F5D58C29D96E9A001BF4FA /* Where is my Lego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where is my Lego.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F5D58F29D96E9A001BF4FA /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
+		81F5D59129D96E9A001BF4FA /* LiveActivitiesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivitiesList.swift; sourceTree = "<group>"; };
+		81F5D59329D96E9C001BF4FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81F5D58929D96E9A001BF4FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81789F6C29D9776D0055CC53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81789F6D29D9777A0055CC53 /* LegoDelivery.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81789F7129D983AA0055CC53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81F5D59129D96E9A001BF4FA /* LiveActivitiesList.swift */,
+				81789F6F29D97B000055CC53 /* DeliveryDetails.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81789F7229D983B30055CC53 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				81789F7329D983BF0055CC53 /* DeliveryDetailsViewModel.swift */,
+				812CD41829EC625800ED30F0 /* LiveActivitiesListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		81789F7A29D985ED0055CC53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81789F7B29D985ED0055CC53 /* WidgetKit.framework */,
+				81789F7D29D985ED0055CC53 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81789F9329D98DEE0055CC53 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		81F5D58329D96E9A001BF4FA = {
+			isa = PBXGroup;
+			children = (
+				81F5D58E29D96E9A001BF4FA /* Where is my Lego */,
+				81789F7A29D985ED0055CC53 /* Frameworks */,
+				81F5D58D29D96E9A001BF4FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81F5D58D29D96E9A001BF4FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81F5D58C29D96E9A001BF4FA /* Where is my Lego.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81F5D58E29D96E9A001BF4FA /* Where is my Lego */ = {
+			isa = PBXGroup;
+			children = (
+				812CD40E29EAF4D000ED30F0 /* WhereIsMyLego.plist */,
+				815ABEA529DB2E410034AC0B /* Where is my Lego.entitlements */,
+				81789F9329D98DEE0055CC53 /* Service */,
+				81789F7229D983B30055CC53 /* ViewModel */,
+				81789F7129D983AA0055CC53 /* View */,
+				81789F6C29D9776D0055CC53 /* Model */,
+				81F5D58F29D96E9A001BF4FA /* MainApp.swift */,
+				81F5D59329D96E9C001BF4FA /* Assets.xcassets */,
+				812CD40F29EB02C900ED30F0 /* AppDelegate.swift */,
+			);
+			path = "Where is my Lego";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81F5D58B29D96E9A001BF4FA /* Where is my Lego */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F5D59A29D96E9C001BF4FA /* Build configuration list for PBXNativeTarget "Where is my Lego" */;
+			buildPhases = (
+				81F5D58829D96E9A001BF4FA /* Sources */,
+				81F5D58929D96E9A001BF4FA /* Frameworks */,
+				81F5D58A29D96E9A001BF4FA /* Resources */,
+				81789F9229D985EE0055CC53 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Where is my Lego";
+			productName = "Where is my Lego";
+			productReference = 81F5D58C29D96E9A001BF4FA /* Where is my Lego.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81F5D58429D96E9A001BF4FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					81F5D58B29D96E9A001BF4FA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 81F5D58729D96E9A001BF4FA /* Build configuration list for PBXProject "Where is my Lego" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81F5D58329D96E9A001BF4FA;
+			productRefGroup = 81F5D58D29D96E9A001BF4FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81F5D58B29D96E9A001BF4FA /* Where is my Lego */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81F5D58A29D96E9A001BF4FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F5D59429D96E9C001BF4FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81F5D58829D96E9A001BF4FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81789F6E29D9777A0055CC53 /* LegoDelivery.swift in Sources */,
+				81F5D59229D96E9A001BF4FA /* LiveActivitiesList.swift in Sources */,
+				81789F7429D983BF0055CC53 /* DeliveryDetailsViewModel.swift in Sources */,
+				81789F7029D97B000055CC53 /* DeliveryDetails.swift in Sources */,
+				81F5D59029D96E9A001BF4FA /* MainApp.swift in Sources */,
+				812CD41029EB02C900ED30F0 /* AppDelegate.swift in Sources */,
+				812CD41929EC625800ED30F0 /* LiveActivitiesListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		81F5D59829D96E9C001BF4FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81F5D59929D96E9C001BF4FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81F5D59B29D96E9C001BF4FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Where is my Lego/Where is my Lego.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = HCM4M8MKGN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhereIsMyLego.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Where is my Lego";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = filip.jablonski.practi.WhereIsMyLego;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81F5D59C29D96E9C001BF4FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Where is my Lego/Where is my Lego.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = HCM4M8MKGN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhereIsMyLego.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Where is my Lego";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = filip.jablonski.practi.WhereIsMyLego;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81F5D58729D96E9A001BF4FA /* Build configuration list for PBXProject "Where is my Lego" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F5D59829D96E9C001BF4FA /* Debug */,
+				81F5D59929D96E9C001BF4FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F5D59A29D96E9C001BF4FA /* Build configuration list for PBXNativeTarget "Where is my Lego" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F5D59B29D96E9C001BF4FA /* Debug */,
+				81F5D59C29D96E9C001BF4FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81F5D58429D96E9A001BF4FA /* Project object */;
+}
