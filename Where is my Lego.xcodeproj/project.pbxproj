@@ -20,6 +20,7 @@
 		81789F6E29D9777A0055CC53 /* LegoDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F6D29D9777A0055CC53 /* LegoDelivery.swift */; };
 		81789F7029D97B000055CC53 /* DeliveryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F6F29D97B000055CC53 /* DeliveryDetails.swift */; };
 		81789F7429D983BF0055CC53 /* DeliveryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F7329D983BF0055CC53 /* DeliveryDetailsViewModel.swift */; };
+		8190526E29EDAC4B007EE856 /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190526D29EDAC4B007EE856 /* LiveActivityService.swift */; };
 		81F5D59029D96E9A001BF4FA /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5D58F29D96E9A001BF4FA /* MainApp.swift */; };
 		81F5D59229D96E9A001BF4FA /* LiveActivitiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5D59129D96E9A001BF4FA /* LiveActivitiesList.swift */; };
 		81F5D59429D96E9C001BF4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F5D59329D96E9C001BF4FA /* Assets.xcassets */; };
@@ -65,6 +66,8 @@
 		81789F7329D983BF0055CC53 /* DeliveryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailsViewModel.swift; sourceTree = "<group>"; };
 		81789F7B29D985ED0055CC53 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		81789F7D29D985ED0055CC53 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		8190526D29EDAC4B007EE856 /* LiveActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LiveActivityService.swift; path = "Where is my Lego/Model/LiveActivityService.swift"; sourceTree = SOURCE_ROOT; };
+		8190526F29EDC65D007EE856 /* LiveActivityExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveActivityExtension.entitlements; sourceTree = "<group>"; };
 		81F5D58C29D96E9A001BF4FA /* Where is my Lego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where is my Lego.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F5D58F29D96E9A001BF4FA /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		81F5D59129D96E9A001BF4FA /* LiveActivitiesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivitiesList.swift; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 		81789F9329D98DEE0055CC53 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8190526D29EDAC4B007EE856 /* LiveActivityService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -148,6 +152,7 @@
 		81F5D58329D96E9A001BF4FA = {
 			isa = PBXGroup;
 			children = (
+				8190526F29EDC65D007EE856 /* LiveActivityExtension.entitlements */,
 				81F5D58E29D96E9A001BF4FA /* Where is my Lego */,
 				812CD42129EC6C5400ED30F0 /* LiveActivity */,
 				81789F7A29D985ED0055CC53 /* Frameworks */,
@@ -292,6 +297,7 @@
 			files = (
 				81789F6E29D9777A0055CC53 /* LegoDelivery.swift in Sources */,
 				81F5D59229D96E9A001BF4FA /* LiveActivitiesList.swift in Sources */,
+				8190526E29EDAC4B007EE856 /* LiveActivityService.swift in Sources */,
 				81789F7429D983BF0055CC53 /* DeliveryDetailsViewModel.swift in Sources */,
 				812CD43229EC6D6900ED30F0 /* LiveActivityAttributes.swift in Sources */,
 				81789F7029D97B000055CC53 /* DeliveryDetails.swift in Sources */,
@@ -317,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LiveActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HCM4M8MKGN;
@@ -346,6 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LiveActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HCM4M8MKGN;

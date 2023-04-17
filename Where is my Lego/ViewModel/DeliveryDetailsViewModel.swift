@@ -86,8 +86,10 @@ final class DeliveryDetailsViewModel: ObservableObject {
                 try validateAndUpdate()
                 if editMode {
                    //TODO: Handle Editing
+                    try await LiveActivityService.shared.updateLiveActivity(legoDelivery: legoDelivery)
                 } else {
                     //TODO: Creation
+                    legoDelivery.id = try await LiveActivityService.shared.addActivity(legoDelivery: legoDelivery)
                     configureMode(isEditMode: true)
                 }
             } catch let error {
