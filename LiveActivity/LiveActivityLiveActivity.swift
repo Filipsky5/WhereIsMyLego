@@ -63,7 +63,7 @@ struct LiveActivityLiveActivity: Widget {
 
 struct LiveActivityLiveActivity_Previews: PreviewProvider {
     static let attributes = LiveActivityAttributes(imageURL: "", setName: "Batmobil", setNumber: 76240)
-    static let contentState = LiveActivityAttributes.ContentState(deliveryTime: "45 min", distance: 2000)
+    static let contentState = LiveActivityAttributes.ContentState(deliveryTime: "45 min", distance: 2000, deliveryDate: Date.now)
 
     static var previews: some View {
         attributes

@@ -15,10 +15,17 @@ final class LiveActivitiesListViewModel: ObservableObject {
         loadActivities()
     }
     
-    func loadActivities() {}
+    func loadActivities() {
+        self.deliveries = LiveActivityService.shared.loadLiveActives()
+    }
     
     func removeItems(at offsets: IndexSet) {
         Task { @MainActor [weak self] in
+            for index in offsets {
+                guard let delivery = self?.deliveries[index] else { continue }
+                await LiveActivityService.shared.endActivity(with: delivery.id)
+            }
+            
             self?.loadActivities()
         }
     }
