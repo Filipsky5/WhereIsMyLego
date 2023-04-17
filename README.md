@@ -7,8 +7,8 @@
 
 ## Service requirements
 - Active Paid Apple Developer Account - If you would like to actively participate in workshops
-	- Genarate or prepare existing APNS Key. To generete one you can follow this [link](link).
-	- Prepare key .p8 file, team id, and key id. We will use these information to send push notification to your app
+	- Generate or prepare existing APNS Key. To generate one you can follow this [link](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns#2943371).
+	- Prepare key .p8 file, team id, and key id. We will use this information to send push notification to your app
 
 
 
