@@ -14,6 +14,7 @@ struct LiveActivityAttributes: ActivityAttributes {
         // Dynamic stateful properties about your activity go here!
         var deliveryTime: String
         var distance: Int
+        var deliveryDate: Date
         
         var distanceValue: Double {
             switch distance {
