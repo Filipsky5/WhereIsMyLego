@@ -18,7 +18,7 @@ final class LiveActivityService {
     static let shared = LiveActivityService()
     private let fiveMinutes: TimeInterval = 5 * 60
     
-    func addActivity(legoDelivery: LegoDelivery) async throws -> String {
+    func addActivity(legoDelivery: LegoDelivery, isTokenEnabled: Bool) async throws -> String {
         guard ActivityAuthorizationInfo().areActivitiesEnabled else {
             throw ActivityError.activityNotEnabled
         }
@@ -29,8 +29,27 @@ final class LiveActivityService {
         let attributes = LiveActivityAttributes(imageURL: legoDelivery.imageURL, setName: legoDelivery.setName, setNumber: legoDelivery.setNumber, imageName: imageURL?.lastPathComponent)
         let contentState = LiveActivityAttributes.ContentState(deliveryTime: formatTimeDiffFromNow(date: legoDelivery.deliveryDate), distance: legoDelivery.distance, deliveryDate: legoDelivery.deliveryDate)
         let content = ActivityContent<LiveActivityAttributes.ContentState>(state: contentState, staleDate: Date.now.addingTimeInterval(fiveMinutes))
-        let activity = try Activity.request(attributes: attributes, content: content, pushType: nil)
+        guard isTokenEnabled else {
+            let activity = try Activity.request(attributes: attributes, content: content, pushType: nil)
+            return activity.id
+        }
+        let activity = try Activity.request(attributes: attributes, content: content, pushType: .token)
         return activity.id
+    }
+    
+    func getToken(for id: String) -> String? {
+        let liveActivity = Activity<LiveActivityAttributes>.activities.first(where: { $0.id == id })
+        if let data = liveActivity?.pushToken {
+            return data.map { String(format: "%02x", $0) }.joined()
+        } else {
+            return nil
+        }
+    }
+    
+    func startObservingTokenChanges(for id: String) -> AsyncMapSequence<Activity<LiveActivityAttributes>.PushTokenUpdates, String>? {
+        let liveActivity = Activity<LiveActivityAttributes>.activities.first(where: { $0.id == id })
+        let results = liveActivity?.pushTokenUpdates.map{ $0.map { String(format: "%02x", $0) }.joined() }
+        return results
     }
     
     func updateLiveActivity(legoDelivery: LegoDelivery) async throws {

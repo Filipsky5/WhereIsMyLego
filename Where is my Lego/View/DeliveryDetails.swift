@@ -27,7 +27,7 @@ struct DeliveryDetails: View {
                     TextField("2000", text: $viewModel.distance).keyboardType(.numberPad)
                     
                 })
-                Toggle("Token Mode:", isOn: $viewModel.isTokenEnabled)
+                Toggle("Token Mode:", isOn: $viewModel.isTokenEnabled).disabled(viewModel.editMode)
                 if !viewModel.token.isEmpty {
                     LabeledContent("Token:", content: {
                         Text(viewModel.token).textSelection(.enabled)

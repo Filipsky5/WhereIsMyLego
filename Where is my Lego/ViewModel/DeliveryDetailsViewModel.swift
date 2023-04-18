@@ -52,6 +52,7 @@ final class DeliveryDetailsViewModel: ObservableObject {
             imageURL = self.legoDelivery.imageURL
             configureMode(isEditMode: false)
         }
+        token = LiveActivityService.shared.getToken(for: self.legoDelivery.id) ?? ""
     }
     
     func configureMode(isEditMode: Bool) {
@@ -59,10 +60,22 @@ final class DeliveryDetailsViewModel: ObservableObject {
             navigationTitle = "Edit Set"
             actionButtonTitle = "Save"
             editMode = true
+            Task {
+               await startObservingTokenChange(forId: legoDelivery.id)
+            }
         } else {
             navigationTitle = "Add Set"
             actionButtonTitle = "Add"
             editMode = false
+        }
+    }
+    
+    @MainActor
+    private func startObservingTokenChange(forId activityId: String) async {
+        guard let asyncTokenIterator = LiveActivityService.shared.startObservingTokenChanges(for: activityId) else { return }
+        for await newToken in asyncTokenIterator {
+            token = newToken
+            isTokenEnabled = true
         }
     }
     
@@ -94,7 +107,7 @@ final class DeliveryDetailsViewModel: ObservableObject {
                     try await LiveActivityService.shared.updateLiveActivity(legoDelivery: legoDelivery)
                 } else {
                     //TODO: Creation
-                    legoDelivery.id = try await LiveActivityService.shared.addActivity(legoDelivery: legoDelivery)
+                    legoDelivery.id = try await LiveActivityService.shared.addActivity(legoDelivery: legoDelivery, isTokenEnabled: isTokenEnabled)
                     configureMode(isEditMode: true)
                 }
             } catch let error {
