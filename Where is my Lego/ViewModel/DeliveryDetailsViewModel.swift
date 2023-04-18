@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UserNotifications
+import UIKit
 
 enum ValidationError: Error {
     case invalidDistance
@@ -84,6 +86,9 @@ final class DeliveryDetailsViewModel: ObservableObject {
             isLoading = true
             do {
                 try validateAndUpdate()
+                try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound])
+                UIApplication.shared.registerForRemoteNotifications()
+                
                 if editMode {
                    //TODO: Handle Editing
                     try await LiveActivityService.shared.updateLiveActivity(legoDelivery: legoDelivery)

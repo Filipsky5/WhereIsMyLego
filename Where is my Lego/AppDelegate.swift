@@ -9,9 +9,10 @@ import Foundation
 import UIKit
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    let notificationHandler = PushNotificationHandler()
+    private let notificationHandler = PushNotificationHandler()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         BackgroundTasksService.shared.registerBackgroundTasks()
+        UNUserNotificationCenter.current().delegate = notificationHandler
         return true
     }
     
@@ -30,6 +31,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
         print("Received Remote notification: \(userInfo)")
+        await LiveActivityService.shared.updateAllActivities()
         return .newData
     }
 }
@@ -37,12 +39,18 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 final class PushNotificationHandler: NSObject, UNUserNotificationCenterDelegate  {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         print("Received notification: \(notification.description)")
-        completionHandler([.banner, .sound, .badge, .list])
+        Task {
+            await LiveActivityService.shared.updateAllActivities()
+            completionHandler([.banner, .sound, .badge, .list])
+        }
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print("Received notification: \(response.description)")
-        completionHandler()
+        Task {
+            await LiveActivityService.shared.updateAllActivities()
+            completionHandler()
+        }
     }
 
 }
