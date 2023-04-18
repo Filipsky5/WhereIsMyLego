@@ -11,10 +11,13 @@ import UIKit
 class AppDelegate: NSObject, UIApplicationDelegate {
     let notificationHandler = PushNotificationHandler()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        BackgroundTasksService.shared.registerBackgroundTasks()
         return true
     }
     
-    func applicationDidEnterBackground(_ application: UIApplication) {}
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        BackgroundTasksService.shared.submitTask()
+    }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let token = deviceToken.map { String(format: "%02x", $0) }.joined()

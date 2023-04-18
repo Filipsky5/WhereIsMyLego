@@ -29,4 +29,8 @@ final class LiveActivitiesListViewModel: ObservableObject {
             self?.loadActivities()
         }
     }
+    
+    func submitTasks() {
+        BackgroundTasksService.shared.submitTask()
+    }
 }

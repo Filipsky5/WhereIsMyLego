@@ -55,6 +55,36 @@ final class LiveActivityService {
         let liveActivates = Activity<LiveActivityAttributes>.activities.compactMap { LegoDelivery(id: $0.id, setNumber: $0.attributes.setNumber, setName: $0.attributes.setName, deliveryDate: $0.content.state.deliveryDate, distance: $0.content.state.distance, imageURL: $0.attributes.imageURL) }
         return liveActivates
     }
+    
+    func updateAllActivities() async {
+        let liveActivates = Activity<LiveActivityAttributes>.activities
+        let numberOfActivities = liveActivates.count
+        let tenMinutes:TimeInterval = 10 * 60
+        for (index, activity) in liveActivates.enumerated() {
+            var deliveryTime: String
+            var distance: Int
+            var deliveryDate: Date
+            switch activity.content.state.distance {
+            case 0..<1000:
+                distance = 0
+                deliveryTime = "Soon"
+                deliveryDate = Date.now
+            case 1000..<5000:
+                distance = 500
+                deliveryTime = "5 min"
+                deliveryDate = Date.now.addingTimeInterval(fiveMinutes)
+            default:
+                distance = 2000
+                deliveryTime = "10 min"
+                deliveryDate = Date.now.addingTimeInterval(tenMinutes)
+            }
+            let relevanceScore = Double(100 / numberOfActivities * (index + 1))
+            let contentState = LiveActivityAttributes.ContentState(deliveryTime: deliveryTime, distance: distance, deliveryDate: deliveryDate)
+            let newState = ActivityContent<Activity<LiveActivityAttributes>.ContentState>.init(state: contentState, staleDate: Date.now.addingTimeInterval(fiveMinutes), relevanceScore: relevanceScore)
+            
+            await activity.update(newState)
+        }
+    }
 }
 
 extension LiveActivityService {

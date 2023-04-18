@@ -20,6 +20,7 @@
 		81789F6E29D9777A0055CC53 /* LegoDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F6D29D9777A0055CC53 /* LegoDelivery.swift */; };
 		81789F7029D97B000055CC53 /* DeliveryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F6F29D97B000055CC53 /* DeliveryDetails.swift */; };
 		81789F7429D983BF0055CC53 /* DeliveryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789F7329D983BF0055CC53 /* DeliveryDetailsViewModel.swift */; };
+		818F30AC29EE4A9B0044D6F3 /* BackgroundTaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F30AB29EE4A9B0044D6F3 /* BackgroundTaskService.swift */; };
 		8190526E29EDAC4B007EE856 /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190526D29EDAC4B007EE856 /* LiveActivityService.swift */; };
 		81F5D59029D96E9A001BF4FA /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5D58F29D96E9A001BF4FA /* MainApp.swift */; };
 		81F5D59229D96E9A001BF4FA /* LiveActivitiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5D59129D96E9A001BF4FA /* LiveActivitiesList.swift */; };
@@ -66,6 +67,7 @@
 		81789F7329D983BF0055CC53 /* DeliveryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailsViewModel.swift; sourceTree = "<group>"; };
 		81789F7B29D985ED0055CC53 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		81789F7D29D985ED0055CC53 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		818F30AB29EE4A9B0044D6F3 /* BackgroundTaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackgroundTaskService.swift; path = "Where is my Lego/Model/BackgroundTaskService.swift"; sourceTree = SOURCE_ROOT; };
 		8190526D29EDAC4B007EE856 /* LiveActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LiveActivityService.swift; path = "Where is my Lego/Model/LiveActivityService.swift"; sourceTree = SOURCE_ROOT; };
 		8190526F29EDC65D007EE856 /* LiveActivityExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveActivityExtension.entitlements; sourceTree = "<group>"; };
 		81F5D58C29D96E9A001BF4FA /* Where is my Lego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where is my Lego.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				8190526D29EDAC4B007EE856 /* LiveActivityService.swift */,
+				818F30AB29EE4A9B0044D6F3 /* BackgroundTaskService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				81789F7429D983BF0055CC53 /* DeliveryDetailsViewModel.swift in Sources */,
 				812CD43229EC6D6900ED30F0 /* LiveActivityAttributes.swift in Sources */,
 				81789F7029D97B000055CC53 /* DeliveryDetails.swift in Sources */,
+				818F30AC29EE4A9B0044D6F3 /* BackgroundTaskService.swift in Sources */,
 				81F5D59029D96E9A001BF4FA /* MainApp.swift in Sources */,
 				812CD41029EB02C900ED30F0 /* AppDelegate.swift in Sources */,
 				812CD41929EC625800ED30F0 /* LiveActivitiesListViewModel.swift in Sources */,
