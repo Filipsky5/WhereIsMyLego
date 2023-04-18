@@ -21,7 +21,9 @@ struct LiveActivitiesList: View {
                     }
                     .onDelete(perform: viewModel.removeItems)
                 }
-                Button("Submit tasks") {}
+                Button("Submit tasks") {
+                    viewModel.submitTasks()
+                }
                 Spacer()
             }
             .navigationBarTitle(Text("Lego Deliveries"))
